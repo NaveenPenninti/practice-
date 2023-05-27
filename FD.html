@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            height: 500px;
+            width: 500px;
+            margin-left: 450px;
+            margin-top: 80px;
+            text-align: center;
+            background-color: rgb(174, 128, 178);
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class">
+        <h1 align="center">Fixed Deposite</h1>
+        <form>
+            <br>
+            <label for="" id="res"></label><br>
+            <label>Name: &nbsp&nbsp&nbsp</label>
+            <input type="text" placeholder="Name" id="name"><br><br>
+            <label>Year: &nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text" placeholder="Year" id="yr"><br><br>
+            <label>Amount:</label>
+            <input type="text" placeholder="Amount" id="amt"><br><br>
+            <label>Tenure: &nbsp</label>
+            <input type="text" placeholder="Tenure" id="ten"><br><br>
+            <button onclick="cal()">Deposite</button>
+            <button>Cancel</button>
+        </form>
+    </div>
+    <script>
+        function cal() {
+            var yr = document.getElementById("yr").value;
+            var amt = document.getElementById("amt").value;
+            var ten = document.getElementById("ten").value;
+            var age = 2023 - year;
+            var rate;
+
+            if (age <= 45) {
+                rate = 5;
+            }
+            else if (age > 45 && age < 60) {
+                rate = 6;
+            }
+            else (age > 60)
+            {
+                rate = 7;
+            }
+
+
+            var interest = (amt * ten * rate) / 100;
+            var total = paresInt(amt) + parseInt(interest);
+            alert(total);
+
+        }
+
+    </script>
+</body>
+
+</html>

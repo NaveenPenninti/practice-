@@ -1,0 +1,23 @@
+<html>
+    <head>
+     <style> 
+    </style>   
+    </head>
+    <body>
+        <lable for="" id="res"></lable>
+        <script>
+            function wishme(){
+                var d=new Date();
+                document.getElementById("res").innerHTML=d.toLocaleTimeString();
+            }
+            function startme(){
+            myset=setInterval(wishme,2000)
+            myset()
+            }
+            function stopme(){
+                clearinterval(myset);
+            }
+
+        </script>
+    </body>
+    </html>

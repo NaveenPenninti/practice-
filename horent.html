@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            height: 500px;
+            width: 500px;
+            margin-left: 450px;
+            margin-top: 80px;
+            text-align: center;
+            background-color: rgb(176, 120, 180);
+            font-size: 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div >
+        <h1 align="center">House Rent</h1>
+        <br>
+    
+        <label>Username</label>
+        <input type="text" placeholder="Username" id="user"><br><br>
+        <lable for="city">City</lable>
+        <select name="" id="city">
+            <option value="">-Select city-</option>
+            <option value="Hyd">Hyderabad</option>
+            <option value="Che">Chennai</option>
+        </select><br><br>
+        <label for="BHK">BHK</label>
+        <select name="" id="flat">
+            <option>-select-</option>
+            <option value="1bhk">1BHK</option>
+            <option value="2bhk">2BHK</option>
+        </select><br><br>
+        <label for="int">Interior</label>
+        <select name="" id="intr">
+
+            <option>-select-</option>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+        <button>Cancel</button>
+        <button onclick="check()">Price</button>
+        <script>
+            var Total;
+            function check() {
+                var city = document.getElementById("city").value;
+                var flat = document.getElementById("flat").value;
+                var intr = document.getElementById("intr").value;
+                if (city == "Hyd") {
+                    if (flat == "1bhk")
+                        rent = 11000;
+
+                    else if(flat=="2bhk")
+                    {
+                        rent =13000;
+                    }
+                }
+                else if (city == "Che") {
+                    if (flat == "1bhk")
+                        rent = 13000;
+
+                    else if(flat =="2bhk")
+                    {
+                        rent = 15000;
+                    }
+                }
+
+                if(intr=="yes"){
+                    var total=rent+(rent/100)*20;
+                    var final=total+(total/100)*12;
+                    console.log(total,final)
+                }
+                else{
+                    final=rent+(rent/100)*12;
+                    console.log(rent,final)
+                }
+
+                        alert(final)
+
+            }
+
+
+
+        </script>
+</body>
+
+</html>

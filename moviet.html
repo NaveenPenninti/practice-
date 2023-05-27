@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+    border:1px solid black ;
+    height:500px;
+    width:500px;
+    margin-left:450px ;
+    margin-top: 80px;
+    text-align: center;
+    background-color: rgb(176, 120, 180);
+    font-size:20px;;
+}
+    </style>
+</head>
+<body>
+    <div class="class">
+    <h1 align="center">MOVIE TICKET BOOKING</h1>
+    <br>
+    <label for="" id="res"></label><br>
+    <label>Username</label>
+    <input type="text" placeholder="Username" id="user"><br><br>
+    <label>password</label>
+    <input type="password" placeholder="password" id="pwd"><br><br>
+    <label>movie</label>
+    <select name="" id="movie">
+    <option>select</option>
+    <option value="ugram">Ugram</option>    
+    <option value="dasara">Dasara</option>
+    <option value="avatar2">Avatar2</option>
+    <option value="king">King</option></select><br><br>
+    <label>Class</label>
+    <select name="" id="tclass">
+    <option>select</option>
+    <option value="400">platinum</option>    
+    <option value="250">Gold</option>
+    <option value="120">silver</option>
+    </select><br><br>
+    <Label>Tickets</Label>
+    <input type="text" name="" id="tickets"><br><br>
+
+    <button>Cancel</button>
+    <button onclick="check()">Book Now</button>
+    
+    <script>
+    function check(){
+    var user=document.getElementById("user").value;
+    var password=document.getElementById("pwd").value;
+    var pwd=user.substring(0,3)+"123";
+        
+       
+    if(pwd==password)
+    {
+            var num1=document.getElementById("tclass").value;
+            var num2=document.getElementById("tickets").value;
+            var amt=parseInt(num1)*parseInt(num2);
+                 
+        document.getElementById("res").innerHTML="booking success amount to be paid  is "+amt;
+        document.getElementById("res").style.color="green"; 
+    }
+    else
+    {
+        document.getElementById("res").innerHTML="login failed";
+        document.getElementById("res").style.color="red"; 
+    }
+}
+
+
+    </script>
+    </body>
+</html>
